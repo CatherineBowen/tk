@@ -6,6 +6,9 @@ class Board(object):
         self._length = dimension
         self._prev = [[0 for _ in range(dimension)] for _ in range(dimension)]
 
+    def getPos(self, tup):
+        return self._board[tup[0]][tup[1]]
+    
     def newGame(self):
         for row in self._board:
             for col in row:
